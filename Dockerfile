@@ -24,7 +24,8 @@ RUN echo "$HOME"
 ## Add .cargo/bin to PATH
 ENV PATH="/root/.cargo/bin:${PATH}"
 
-RUN curl https://sh.rustup.rs -sSf | sh -s -- -y
+ARG RUST_VERSION=1.61.0
+RUN curl https://sh.rustup.rs -sSf | sh -s -- -y --default-toolchain ${RUST_VERSION}
 
 RUN echo "install rust, now source rust"
 # rustup says to run this!
