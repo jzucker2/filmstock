@@ -5,8 +5,8 @@ Found this for keeping docker images up to date!
 https://github.com/containrrr/watchtower
 
 ```
-docker build -t rufus:latest .
-docker run -dp 5000:5000 rufus
+docker build -t filmstock:latest .
+docker run -dp 5000:5000 filmstock
 docker container ls
 # container ID from above used below
 docker exec -it f7ecbbadc663 /bin/sh
@@ -18,8 +18,8 @@ Docker compose
 # don't always need --build
 docker-compose up -d --build
 docker-compose ps
-docker-compose logs rufus
-docker-compose exec -it rufus /bin/sh
+docker-compose logs filmstock
+docker-compose exec -it filmstock /bin/sh
 docker-compose stop
 ```
 

@@ -1,0 +1,17 @@
+version: '3.7'
+
+services:
+
+  filmstock:
+    container_name: filmstock
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: ['sh', 'scripts/test.sh']
+    volumes:
+      - '.:/filmstock'
+    ports:
+      - "5000:5000"
+    stdin_open: true
+    tty: true
+
