@@ -38,7 +38,8 @@ RUN pip install -r requirements.txt
 
 FROM python_dependencies as clean_up
 RUN rustup self uninstall -y \
-  && rm -rf /root/.cache /root/.cargo /tmp/* /var/lib/apt/lists/*
+  && rm -rf /root/.cargo
+#  && rm -rf /root/.cache /root/.cargo /tmp/* /var/lib/apt/lists/* \
 
 FROM clean_up AS test_build
 COPY /scripts /scripts
