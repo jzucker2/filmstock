@@ -80,3 +80,4 @@ Installing rust has instructions:
 
 * https://rust-lang.github.io/rustup/installation/other.html
 * https://static.rust-lang.org/rustup/rustup-init.sh
+* https://forge.rust-lang.org/infra/other-installation-methods.html#which
