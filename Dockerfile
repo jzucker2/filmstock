@@ -18,9 +18,6 @@ RUN apt-get update -y && apt-get install -y \
 
 FROM debian_base as install_rust
 
-RUN echo "Print HOME ..."
-RUN echo "$HOME"
-
 ## Add .cargo/bin to PATH
 ENV PATH="/root/.cargo/bin:${PATH}"
 
