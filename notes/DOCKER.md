@@ -23,6 +23,12 @@ docker-compose exec -it filmstock /bin/sh
 docker-compose stop
 ```
 
+## Dockerfile
+
+The [reference page for Dockerfile is here](https://docs.docker.com/engine/reference/builder/)
+
+I also should probably take advantage of `ONBUILD` [here](https://docs.docker.com/engine/reference/builder/#onbuild)
+
 ## Docker Raspberry Pi Set Up
 
 From [here](https://dev.to/elalemanyo/how-to-install-docker-and-docker-compose-on-raspberry-pi-1mo)

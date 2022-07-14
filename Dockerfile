@@ -37,10 +37,14 @@ COPY requirements.txt requirements.txt
 RUN pip install -r requirements.txt
 
 FROM python_dependencies as clean_up
+
+# remove existing `requirements.txt` to prevent clashes
+RUN rm requirements.txt
+
 RUN rustup self uninstall -y \
   && rm -rf /root/.cargo
 #  && rm -rf /root/.cache /root/.cargo /tmp/* /var/lib/apt/lists/* \
 
 FROM clean_up AS test_build
-COPY /scripts /scripts
-CMD ["sh", "scripts/test.sh"]
+COPY /scripts /filmstock/scripts
+CMD ["sh", "filmstock/scripts/test.sh"]
