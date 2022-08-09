@@ -29,7 +29,7 @@ RUN echo "done setting cargo env"
 RUN cargo --help
 
 FROM install_rust AS pip_setup
-ARG PIP_VERSION=22.1.2
+ARG PIP_VERSION=22.2.2
 RUN pip install pip==${PIP_VERSION}
 
 FROM pip_setup AS python_dependencies
