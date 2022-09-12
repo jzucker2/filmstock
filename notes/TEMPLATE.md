@@ -15,3 +15,6 @@ same apps out of this base image.
 - [ ] Renaming script
 - [ ] DB support?
 - [ ] Should I have a `BaseModel` like in `commando`?
+- [ ] Gunicorn scripts to run
+- [ ] Example `supervisor` conf scripts
+- [ ] Example populate data scripts
