@@ -14,7 +14,7 @@ same apps out of this base image.
 - [ ] MQTT support
 - [ ] Renaming script
 - [ ] DB support?
-- [ ] Should I have a `BaseModel` like in `commando`?
+- [ ] Should I have a `BaseModel` like in other projects?
 - [ ] Gunicorn scripts to run
 - [ ] Example `supervisor` conf scripts
 - [ ] Example populate data scripts
