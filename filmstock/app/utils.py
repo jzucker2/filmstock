@@ -105,11 +105,6 @@ def generate_uuid():
     return str(uuid4())
 
 
-# TODO: append DEV if not `PRODUCTION`
-def get_default_description(version):
-    return f'Updated by commando.health (v{version})'
-
-
 def has_query_param(incoming_request, key):
     value = incoming_request.args.get(key, None)
     return bool(value is not None)

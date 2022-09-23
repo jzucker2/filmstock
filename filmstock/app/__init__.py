@@ -21,6 +21,7 @@ def create_app(config=config.base_config):
 
         @app.route("/")
         def hello_world():
+            # FIXME: replace with a constant
             return "<p>Welcome to Filmstock!</p>"
 
         # Include our Routes

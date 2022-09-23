@@ -7,6 +7,7 @@ log = app.logger
 
 
 DEFAULT_SERVICE = 'service'
+# FIXME: replace with a constant
 DEFAULT_SERVER = 'filmstock'
 
 

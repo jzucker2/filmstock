@@ -23,6 +23,7 @@ def hey():
 @app.route('/utils/version')
 def version():
     return {
+        # FIXME: replace with a constant
         'server': 'filmstock',
         'version': get_version(),
     }
