@@ -31,3 +31,5 @@ updates:
       - dependency-name: "requests"
       # running the app
       - dependency-name: "gunicorn"
+      # monitoring
+      - dependency-name: "prometheus*"
