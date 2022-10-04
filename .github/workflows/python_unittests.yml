@@ -32,4 +32,4 @@ jobs:
           pip install -r requirements.txt
       - name: Test with unittest
         run: |
-          python -m unittest discover
+          PROMETHEUS_MULTIPROC_DIR=/tmp prometheus_multiproc_dir=/tmp METRICS_PORT=9200 python -m unittest discover

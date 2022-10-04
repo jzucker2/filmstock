@@ -3,6 +3,7 @@ from flask import Flask
 from . import config
 from . import database
 from .extensions import migrate, cors
+from .metrics import metrics
 
 
 def create_app(config=config.base_config):
@@ -27,6 +28,9 @@ def create_app(config=config.base_config):
         # Include our Routes
         from .routes import utils  # noqa: F401
 
+        # after routes, register metrics
+        register_metrics(app)
+
     return app
 
 
@@ -47,6 +51,10 @@ def register_extensions(app):
     migrate.init_app(app, db=db, directory=migration_directory)
     # TODO: do we need the below??
     # db.create_all()
+
+
+def register_metrics(app):
+    metrics.init_app(app)
 
 
 def ensure_admin(application):

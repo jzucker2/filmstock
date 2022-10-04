@@ -45,6 +45,11 @@ RUN rustup self uninstall -y \
   && rm -rf /root/.cargo
 #  && rm -rf /root/.cache /root/.cargo /tmp/* /var/lib/apt/lists/* \
 
-FROM clean_up AS test_build
+FROM clean_up AS configure
+ENV PROMETHEUS_MULTIPROC_DIR /tmp
+ENV prometheus_multiproc_dir /tmp
+ENV METRICS_PORT 9200
+
+FROM configure AS test_build
 COPY /scripts /filmstock/scripts
 CMD ["sh", "filmstock/scripts/test.sh"]
