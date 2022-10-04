@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
-from producer.producer import main
+from app.version import version
+from producer.producer import run_cli
 
 
 if __name__ == "__main__":
-    main()
+    run_cli(version=version)
