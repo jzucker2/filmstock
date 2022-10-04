@@ -1,4 +1,4 @@
-# based around https://github.com/cburmeister/flask-bones
+# based around https://github.com/jzucker2/filmstock
 from flask import Flask
 from . import config
 from . import database

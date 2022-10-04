@@ -50,3 +50,7 @@ This is somewhat ordered. Plan laid out below --->
 - [ ] Gunicorn scripts to run
 - [ ] Example `supervisor` conf scripts
 - [ ] Example populate data scripts
+
+## Inspiration
+
+* https://github.com/cburmeister/flask-bones
