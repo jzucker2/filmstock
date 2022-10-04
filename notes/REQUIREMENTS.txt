@@ -1,0 +1,9 @@
+# Requirements
+
+For the `requirements.txt` file, there are a few flavors.
+
+The main `requirements.txt` is for all necessary dependencies in the base image.
+
+The `dev-requirements.txt` is for just dev work, like linting.
+
+The `mvp-requirements.txt` is for a simple set up without JWT and other dependencies like that.

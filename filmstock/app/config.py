@@ -78,6 +78,16 @@ class base_config(object):
     APP_DIR = os.path.dirname(__file__)
     MIGRATION_DIRECTORY = os.path.join(APP_DIR, "migrations")
 
+    # custom client code
+    # example (matching `filmstock/app/clients/example/`)
+    # FIXME: what's the best way to do routing?
+    EXAMPLE_HOST = os.getenv("EXAMPLE_HOST",
+                             default="10.0.1.128")
+    EXAMPLE_PORT = int(os.getenv("EXAMPLE_PORT",
+                                 default=1929))
+    SHOULD_USE_EXAMPLE = os.getenv("SHOULD_USE_EXAMPLE",
+                                   default="1")
+
 
 class dev_config(base_config):
     """Development configuration options."""
