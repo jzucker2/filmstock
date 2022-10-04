@@ -79,7 +79,7 @@ class base_config(object):
     MIGRATION_DIRECTORY = os.path.join(APP_DIR, "migrations")
 
     # custom client code
-    # example (sound effects)
+    # example (matching `filmstock/app/clients/example/`)
     # FIXME: what's the best way to do routing?
     EXAMPLE_HOST = os.getenv("EXAMPLE_HOST",
                              default="10.0.1.128")
