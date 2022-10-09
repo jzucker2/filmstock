@@ -4,18 +4,24 @@ from prometheus_flask_exporter import Counter, Summary, Gauge
 
 
 class Labels(Enum):
-    ACTIVITY_NAME = 'activity_name'
+    FOO = 'foo'
 
     @classmethod
     def labels(cls):
         return list([
-            cls.ACTIVITY_NAME.value,
+            cls.FOO.value,
         ])
 
 
 EXAMPLE_TIME = Summary(
     'example_time_seconds',
     'Time spent on example function')
+
+
+EXAMPLE_LABEL_COUNTER = Counter(
+    'example_counter',
+    'Counter during example function',
+    Labels.labels())
 
 
 EXAMPLE_EXCEPTIONS_COUNTER = Counter(
