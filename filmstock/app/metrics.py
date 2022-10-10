@@ -13,25 +13,23 @@ class Labels(Enum):
         ])
 
 
-EXAMPLE_TIME = Summary(
-    'example_time_seconds',
-    'Time spent on example function')
+class Metrics(object):
+    EXAMPLE_TIME = Summary(
+        'example_time_seconds',
+        'Time spent on example function')
 
+    EXAMPLE_LABEL_COUNTER = Counter(
+        'example_counter',
+        'Counter during example function',
+        Labels.labels())
 
-EXAMPLE_LABEL_COUNTER = Counter(
-    'example_counter',
-    'Counter during example function',
-    Labels.labels())
+    EXAMPLE_EXCEPTIONS_COUNTER = Counter(
+        'example_exceptions',
+        'Exceptions during example function')
 
-
-EXAMPLE_EXCEPTIONS_COUNTER = Counter(
-    'example_exceptions',
-    'Exceptions during example function')
-
-
-EXAMPLE_GAUGE = Gauge(
-    'example_gauge',
-    'Example gauge during function')
+    EXAMPLE_GAUGE = Gauge(
+        'example_gauge',
+        'Example gauge during function')
 
 
 # https://github.com/rycus86/prometheus_flask_exporter#app-factory-pattern
