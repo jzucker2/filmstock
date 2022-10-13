@@ -17,7 +17,7 @@ itsdangerous==2.1.2
 Jinja2==3.1.2
 Mako==1.2.1
 MarkupSafe==2.1.1
-prometheus-client==0.14.1
+prometheus-client==0.15.0
 prometheus-flask-exporter==0.20.3
 pycparser==2.21
 PyJWT==2.4.0
