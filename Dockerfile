@@ -29,8 +29,8 @@ RUN echo "done setting cargo env"
 RUN cargo --help
 
 FROM install_rust AS pip_setup
-ARG PIP_VERSION=22.3
-RUN pip install pip==${PIP_VERSION}
+COPY pip-requirements.txt pip-requirements.txt
+RUN pip install -r pip-requirements.txt
 
 FROM pip_setup AS python_dependencies
 COPY requirements.txt requirements.txt
@@ -40,6 +40,7 @@ FROM python_dependencies as clean_up
 
 # remove existing `requirements.txt` to prevent clashes
 RUN rm requirements.txt
+RUN rm pip-requirements.txt
 
 RUN rustup self uninstall -y \
   && rm -rf /root/.cargo
