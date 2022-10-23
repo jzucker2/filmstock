@@ -30,3 +30,9 @@ FROM seed_initial_data AS run_server
 # can use `run_dev.sh` or `run_prod.sh`
 CMD ["sh", "run_dev.sh"]
 ```
+
+## Dependencies
+
+Use `requirements.txt` for **all** the dependencies tracked within this project, including `jwt` and auth related packages.
+
+For just the basics for a simple open POC flask app, use `mvp-requirements.txt` instead.
