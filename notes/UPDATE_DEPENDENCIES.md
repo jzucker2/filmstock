@@ -13,7 +13,7 @@ cd ..
 cd filmstock
 pip freeze
 # should be empty, now install latest pip, according to `Dockerfile`
-pip install pip==22.3
+pip install -r pip-requirements.txt
 ```
 
 Now run the following, but first make sure to pin 
