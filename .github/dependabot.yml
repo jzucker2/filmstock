@@ -48,3 +48,5 @@ updates:
       - dependency-name: "gunicorn"
       # monitoring
       - dependency-name: "prometheus*"
+      # watch pip itself, just in case
+      - dependency-name: "pip"
