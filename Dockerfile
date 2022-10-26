@@ -1,4 +1,4 @@
-FROM python:3.10 AS linux_base
+FROM python:3.11.0 AS linux_base
 # https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=998232
 ENV CARGO_NET_GIT_FETCH_WITH_CLI=true
 
