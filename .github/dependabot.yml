@@ -50,3 +50,5 @@ updates:
       - dependency-name: "prometheus*"
       # watch pip itself, just in case
       - dependency-name: "pip"
+      # big pain to deal with
+      - dependency-name: "cryptography"
