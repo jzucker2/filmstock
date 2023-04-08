@@ -11,3 +11,9 @@ Some notes to follow ...
 I am using Dependabot to manage dependency versions
 
 * https://docs.github.com/en/code-security/dependabot
+
+## Issues
+
+* https://github.blog/changelog/2022-10-11-github-actions-deprecating-save-state-and-set-output-commands/
+  * https://github.com/jzucker2/commando/actions/runs/4647033968/jobs/8223816236
+    * example
