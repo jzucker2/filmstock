@@ -85,7 +85,7 @@ jobs:
           # linux/amd64, linux/arm64, linux/riscv64, linux/ppc64le, linux/s390x, linux/386, linux/arm/v7, linux/arm/v6
           # for details on linux/arm/v6 (raspberry pi 0) support,
           # see here: https://raspberrypi.stackexchange.com/questions/111130/how-to-install-nodejs-v12-on-raspi-zero-armv6-not-available-for-download-anymor
-          platforms: linux/amd64,linux/arm64,linux/arm/v7
+          platforms: linux/amd64,linux/arm64
           push: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
