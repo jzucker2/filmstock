@@ -18,7 +18,7 @@ FROM debian_base as install_rust
 # Add .cargo/bin to PATH
 ENV PATH="/root/.cargo/bin:${PATH}"
 
-ARG RUST_VERSION=1.63.0
+ARG RUST_VERSION=1.72.0
 RUN curl https://sh.rustup.rs -sSf | sh -s -- -y --default-toolchain ${RUST_VERSION}
 
 RUN echo "install rust, now source rust"
