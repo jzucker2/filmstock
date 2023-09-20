@@ -8,6 +8,11 @@ rm .python-version
 pyenv virtualenv 3.10.7 filmstock-example-3.10.7
 pyenv virtualenv <version> <unique name>-<version>
 
+# or
+rm -rf venv
+python3 -m venv venv
+source venv/bin/activate
+
 echo "<unique name>-<version>" > .python-version
 cd ..
 cd filmstock

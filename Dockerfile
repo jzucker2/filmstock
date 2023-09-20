@@ -1,4 +1,4 @@
-FROM python:3.10 AS linux_base
+FROM python:3.11 AS linux_base
 # https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=998232
 ENV CARGO_NET_GIT_FETCH_WITH_CLI=true
 
@@ -18,7 +18,7 @@ FROM debian_base as install_rust
 # Add .cargo/bin to PATH
 ENV PATH="/root/.cargo/bin:${PATH}"
 
-ARG RUST_VERSION=1.61.0
+ARG RUST_VERSION=1.72.0
 RUN curl https://sh.rustup.rs -sSf | sh -s -- -y --default-toolchain ${RUST_VERSION}
 
 RUN echo "install rust, now source rust"
