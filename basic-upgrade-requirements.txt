@@ -1,0 +1,9 @@
+Flask[async]
+Flask-Cors
+Flask-Migrate
+Flask-SQLAlchemy
+gunicorn
+prometheus-client
+prometheus-flask-exporter
+requests
+SQLAlchemy
